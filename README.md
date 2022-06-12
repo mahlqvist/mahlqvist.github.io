@@ -1,3 +1,3 @@
-# Hello World
+# History of computing
 
-A website for github pages
+A website about the history of computing for the github pages.
