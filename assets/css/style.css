@@ -34,7 +34,7 @@ html, body {
 /* Header Section */
 header {
     height: 100vh;
-    background-image: linear-gradient(hsl(0 0% 0% / .5), hsl(0 0% 0% / .5)), url('../images/roof_background.jpg');
+    background-image: linear-gradient(hsl(0 0% 0% / .5), hsl(0 0% 0% / .5)), url('../images/roof_background-min.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
