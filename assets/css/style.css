@@ -30,6 +30,7 @@
 html, body {
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
     width: .2rem;
@@ -40,6 +41,9 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     background: hsl(210 8% 95% / 0.7);
+}
+h1, h2 {
+    text-align: center;
 }
 /* Header Section */
 header {
@@ -138,6 +142,7 @@ header {
     list-style-type: none;
     display: flex;
     background: hsl(0 0% 100% / .1);
+    border: 1px solid hsl(0 0% 0% / .1);
     border-radius: 2px;
 }
 .nav-item {
@@ -192,7 +197,7 @@ header {
         overflow: hidden;
     }
     .navbar.active {
-        height: 45vh;
+        height: 40vh;
         opacity: 1;
         pointer-events: all;
     }
@@ -229,5 +234,51 @@ header {
 }
 /* Section Early */
 #early {
-    height: 50vh;;
+    background: #f2f3f4;
+    color: #333;
+    height: 100vh;
+    padding: 2rem;
+}
+#early h2 {
+    font-size: 180%;
+    letter-spacing: 1px;
+    color: #dd6001;
+}
+#early h2::after {
+    content: '';
+    display: block;
+    width: 7rem;
+    height: 1px;
+    background: #fe6f02;
+    margin: 1rem auto;
+}
+#early .content {
+    margin: 1rem 0;
+}
+#early .content p,
+#early .content img {
+    padding: 1rem;
+}
+.it {
+    display: block;
+    width: 200px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+@media screen and (min-width: 680px) {
+    .content {
+        padding-top: 2rem;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Footer */
+footer {
+    background: hsl(211 28% 25% / .9);
+}
+footer p {
+    text-align: center;
+    color: #fe6f02;
+    padding: .8rem 0;
 }
