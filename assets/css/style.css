@@ -236,10 +236,10 @@ header {
 #early {
     background: #f2f3f4;
     color: #333;
-    height: 100vh;
-    padding: 2rem;
+    padding: 0 2rem;
 }
 #early h2 {
+    padding-top: 2rem;
     font-size: 180%;
     letter-spacing: 1px;
     color: #dd6001;
@@ -252,25 +252,43 @@ header {
     background: #fe6f02;
     margin: 1rem auto;
 }
-#early .content {
-    margin: 1rem 0;
+
+#early .content p {
+    text-align:justify;
+    padding-bottom: 1.5rem;
 }
-#early .content p,
-#early .content img {
-    padding: 1rem;
+.it-img {
+    width: 20rem;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 5px;
+    box-shadow: hsl(0 0% 0% / .8) 0px 5px 15px, inset hsl(0 0% 0% / .15) 0px -10px 20px;
+    overflow: hidden;
 }
 .it {
-    display: block;
-    width: 200px;
-    border-radius: 5px;
-    margin: 0 auto;
+    width: 100%;
+    transform: scale(1.4);
+    opacity: .9;
+    transition: all 800ms ease;
+}
+.it:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.task-list {
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #235594;
 }
 @media screen and (min-width: 680px) {
-    .content {
-        padding-top: 2rem;
+    #early .content {
+        padding: 4rem 6rem;
         display: grid;
         gap: 20px;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .it-img {
+        width: 35rem;
     }
 }
 /* Footer */
@@ -280,5 +298,5 @@ footer {
 footer p {
     text-align: center;
     color: #fe6f02;
-    padding: .8rem 0;
+    padding: .8rem;
 }
