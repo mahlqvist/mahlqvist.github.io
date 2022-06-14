@@ -259,6 +259,7 @@ header {
 }
 .it-img {
     width: 20rem;
+    height: fit-content;
     margin: 0 auto 1.5rem auto;
     border-radius: 5px;
     box-shadow: hsl(0 0% 0% / .8) 0px 5px 15px, inset hsl(0 0% 0% / .15) 0px -10px 20px;
@@ -280,15 +281,16 @@ header {
     letter-spacing: 1px;
     color: #235594;
 }
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 1280px) {
     #early .content {
-        padding: 4rem 6rem;
+        padding: 4rem;
         display: grid;
-        gap: 20px;
+        gap: 2rem;
         grid-template-columns: repeat(2, 1fr);
     }
     .it-img {
-        width: 35rem;
+        width: 30rem;
+        background-size: contain;
     }
 }
 /* Footer */
