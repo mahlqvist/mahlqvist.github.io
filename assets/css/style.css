@@ -30,6 +30,7 @@
 html, body {
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
+    color: #333;
     scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
@@ -41,6 +42,9 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     background: hsl(210 8% 95% / 0.7);
+}
+h1, h2, h3 {
+    margin-bottom: 1.2rem;
 }
 h1, h2 {
     text-align: center;
@@ -128,10 +132,10 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-.img-box {
+.logo-box {
     width: 5rem;
 }
-.logo {
+.logo-box .logo {
     width: 100%;
     background: hsl(0 0% 100% / .5);
     margin: 1rem;
@@ -177,7 +181,7 @@ header {
 }
 
 /* Mobile Navigation */
-@media  screen and (max-width: 680px) {
+@media (max-width: 680px), (max-height: 500px) {
     .hero-box {
         height: 4rem;
     }
@@ -197,7 +201,7 @@ header {
         overflow: hidden;
     }
     .navbar.active {
-        height: 40vh;
+        height: 60vh;
         opacity: 1;
         pointer-events: all;
     }
@@ -205,7 +209,7 @@ header {
         z-index: 9999;
         position: absolute;
         top: 35%;
-        right: 5%;
+        right: 7%;
         width: 25px;
         cursor: pointer;
     }
@@ -232,19 +236,28 @@ header {
         opacity: 0;
     }
 }
-/* Section Early */
-#early {
-    background: #f2f3f4;
-    color: #333;
-    padding: 0 2rem;
+/* Sections */
+#early, #middle, #modern {
+    padding: 2rem 4rem;
 }
-#early h2 {
-    padding-top: 2rem;
+#early, #modern {
+    background: linear-gradient(hsl(0 0% 0% / .2), hsl(0 0% 0% / .2));
+}
+#middle {
+    background-image: linear-gradient(hsl(0 0% 0% / .5), hsl(0 0% 0% / .5)), url('../images/knowing-min.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #f1f2f3;
+    text-shadow: 1px 1px hsl(0 0% 100% / .1);
+}
+section h2 {
     font-size: 180%;
     letter-spacing: 1px;
     color: #dd6001;
 }
-#early h2::after {
+section h2::after {
     content: '';
     display: block;
     width: 7rem;
@@ -252,45 +265,76 @@ header {
     background: #fe6f02;
     margin: 1rem auto;
 }
-
-#early .content p {
-    text-align:justify;
-    padding-bottom: 1.5rem;
+.box {
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
 }
-.it-img {
-    width: 20rem;
-    height: fit-content;
-    margin: 0 auto 1.5rem auto;
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    width: min(30rem, 100%);
+}
+.content p {
+    padding: .5rem 0;
+    text-align: justify;
+}
+.img-box {
+    margin: 6rem auto;
+    width: min(30rem, 90%);
+    height: 15rem;
     border-radius: 5px;
-    box-shadow: hsl(0 0% 0% / .8) 0px 5px 15px, inset hsl(0 0% 0% / .15) 0px -10px 20px;
+    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
     overflow: hidden;
 }
-.it {
+.img-box img {
     width: 100%;
-    transform: scale(1.4);
-    opacity: .9;
-    transition: all 800ms ease;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transform: scale(1.3);
+    transition: all 800ms ease-in-out;
 }
-.it:hover {
-    opacity: 1;
-    transform: scale(1.1);
+.img-box img:hover {
+    transform: scale(1.01);
 }
-.task-list {
-    font-style: italic;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #235594;
-}
-@media screen and (min-width: 1280px) {
-    #early .content {
-        padding: 4rem;
-        display: grid;
-        gap: 2rem;
-        grid-template-columns: repeat(2, 1fr);
+@media  screen and (max-width: 1024px) {
+    #early, #middle, #modern {
+        padding: 2rem;
     }
-    .it-img {
-        width: 30rem;
-        background-size: contain;
+    .box {
+        gap: 2rem;
+    }
+    .img-box {
+        width: min(25rem, 100%);
+        height: 15rem;
+    }
+}
+@media  screen and (max-width: 780px) {
+    .content-heading {
+        text-align: center;
+    }
+    .box {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .img-box {
+        margin: 0 auto 2rem auto;
+        width: min(20rem, 100%);
+        height: 12rem;
+    }
+    .box.middle > .img-box {
+        order: 1;
+    }
+    .box.middle > .content {
+        order: -1;
+    }
+}
+@media  screen and (max-width: 400px) {
+    .logo-box {
+        width: 4rem;
     }
 }
 /* Footer */
