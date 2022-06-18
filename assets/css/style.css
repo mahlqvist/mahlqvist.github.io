@@ -312,7 +312,7 @@ section h2::after {
 .img-box img:hover {
     transform: scale(1.01);
 }
-@media  screen and (max-width: 1024px) {
+@media  (max-width: 1024px) {
     #early, #middle, #modern {
         padding: 2rem;
     }
@@ -324,7 +324,7 @@ section h2::after {
         height: 15rem;
     }
 }
-@media  screen and (max-width: 780px) {
+@media  (max-width: 780px) {
     .content-heading {
         text-align: left;
     }
@@ -343,7 +343,7 @@ section h2::after {
         order: -1;
     }
 }
-@media  screen and (max-width: 400px) {
+@media  (max-width: 400px) {
     .logo-box {
         width: 4rem;
     }
