@@ -1,6 +1,7 @@
 @font-face {
-    font-family: 'newcicle';
+    font-family: 'Quicksand';
     src: 
+        local('Quicksand'),
         url('../fonts/quicksand-v29-latin-300.woff') format('woff');
     font-weight: 300;
     font-style: normal;
@@ -27,11 +28,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body {
+html {
+    scroll-behavior: smooth;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
-    color: #333;
-    scroll-behavior: smooth;
+    color: #333;  
 }
 body::-webkit-scrollbar {
     width: .2rem;
@@ -145,7 +146,7 @@ header {
 .navbar {
     list-style-type: none;
     display: flex;
-    background: hsl(0 0% 100% / .1);
+    background: hsl(0 0% 0% / .4);
     border: 1px solid hsl(0 0% 0% / .1);
     border-radius: 2px;
 }
@@ -156,13 +157,13 @@ header {
     text-decoration: none;
     text-transform: uppercase;
     color: #fe6f02;
+    text-shadow: 1px 1px #dd6001;
     letter-spacing: 1px;
     -webkit-filter: hue-rotate(0deg);
             filter: hue-rotate(0deg);
     transition: all 700ms ease-in-out;
 }
 .nav-link:hover {
-   /*  color: #dd6001; */
     -webkit-filter: hue-rotate(240deg);
             filter: hue-rotate(240deg);
     
