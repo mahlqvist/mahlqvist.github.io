@@ -237,7 +237,7 @@ header {
         opacity: 0;
     }
 }
-/* Sections */
+/* History Sections */
 #early, #middle, #modern {
     padding: 2rem 4rem;
 }
@@ -283,6 +283,16 @@ section h2::after {
     padding: .5rem 0;
     text-align: justify;
 }
+.important {
+    color: #1e81b0;
+    font-weight: 700;
+    font-style: italic;
+}
+.highlight {
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 3px;
+}
 .img-box {
     margin: 6rem auto;
     width: min(30rem, 90%);
@@ -316,7 +326,7 @@ section h2::after {
 }
 @media  screen and (max-width: 780px) {
     .content-heading {
-        text-align: center;
+        text-align: left;
     }
     .box {
         grid-template-columns: repeat(1, 1fr);
