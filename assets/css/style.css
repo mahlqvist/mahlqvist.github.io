@@ -250,6 +250,8 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+#middle > * {
     color: #f1f2f3;
     text-shadow: 1px 1px hsl(0 0% 100% / .1);
 }
